@@ -11,8 +11,10 @@ import iconStyle from '../styles';
 const CloseIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <span css={iconStyle}>
-      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-      <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="m8 8 32 32M8 40 40 8" />
+      <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="24" height="24" {...props}>
+        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+        <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="m8 8 32 32M8 40 40 8" />
+      </svg>
     </span>
   );
 };

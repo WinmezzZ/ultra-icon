@@ -11,14 +11,16 @@ import iconStyle from '../styles';
 const AddIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
     <span css={iconStyle}>
-      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-      <path
-        stroke="#333"
-        strokeLinejoin="round"
-        strokeWidth={4}
-        d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4 4 12.954 4 24s8.954 20 20 20Z"
-      />
-      <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M24 16v16m-8-8h16" />
+      <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="24" height="24" {...props}>
+        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+        <path
+          stroke="#333"
+          strokeLinejoin="round"
+          strokeWidth={4}
+          d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4 4 12.954 4 24s8.954 20 20 20Z"
+        />
+        <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M24 16v16m-8-8h16" />
+      </svg>
     </span>
   );
 };

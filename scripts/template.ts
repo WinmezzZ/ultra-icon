@@ -1,31 +1,17 @@
-import { callExpression, stringLiteral } from '@babel/types';
 import { jsxExpressionContainer } from '@babel/types';
-import { expressionStatement } from '@babel/types';
 import { jsxAttribute } from '@babel/types';
-import {
-  identifier,
-  tsTypeAnnotation,
-  tsTypeReference,
-  tsTypeParameterInstantiation,
-  jsxClosingElement,
-  jsxElement,
-  jsxIdentifier,
-  jsxOpeningElement,
-  jsxOpeningFragment,
-  jsxClosingFragment,
-  jsxSpreadAttribute,
-  jsxSpreadChild,
-  jsxFragment,
-  react,
-} from '@babel/types';
+import { identifier, jsxClosingElement, jsxElement, jsxIdentifier, jsxOpeningElement } from '@babel/types';
+import { transform } from '@svgr/core';
 
-const template: any = ({ imports, interfaces, componentName, props, jsx, exports }: any, { tpl }: any) => {
+type Template = Parameters<typeof transform>['1']['template'];
+
+const template: Template = ({ imports, interfaces, componentName, props, jsx, exports }: any, { tpl }: any) => {
   const wrappedJsx = jsxElement(
     jsxOpeningElement(jsxIdentifier('span'), [
       jsxAttribute(jsxIdentifier('css'), jsxExpressionContainer(identifier('iconStyle'))),
     ]),
     jsxClosingElement(jsxIdentifier('span')),
-    (react.buildChildren as any)(jsx),
+    [jsx],
     false,
   );
 
@@ -36,9 +22,11 @@ const template: any = ({ imports, interfaces, componentName, props, jsx, exports
 
  /** @jsx jsx */
  import { jsx } from '@emotion/react';
- import { SVGProps } from 'react';
+ ${imports};
 import PropTypes from 'prop-types';
 import iconStyle from '../styles';
+
+${interfaces};
 
 const ${componentName} = (${props}) => {
   return ${wrappedJsx}

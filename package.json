@@ -37,7 +37,6 @@
   "devDependencies": {
     "@babel/types": "^7.17.10",
     "@changesets/cli": "^2.22.0",
-    "@emotion/react": "^11.9.0",
     "@svgr/core": "6.2.1",
     "@svgr/plugin-jsx": "6.2.1",
     "@svgr/plugin-prettier": "6.1.2",
@@ -54,5 +53,9 @@
     "rollup-plugin-esbuild": "^4.9.1",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.4"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "react": "^17.0.2"
   }
 }
