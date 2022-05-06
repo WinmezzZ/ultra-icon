@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "rootDir": ".",
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "./",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["*.ts"],
+  "exclude": ["./node_modules", "./dist", "src/icons"]
+}
