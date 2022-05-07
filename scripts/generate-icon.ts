@@ -1,16 +1,21 @@
 import fs from 'fs';
+import path from 'path';
+import glob from 'glob';
 import { transform } from '@svgr/core';
 import camelcase from 'camelcase';
 import template from './template';
 
-const files = fs.readdirSync('./raw', 'utf-8');
+const files = glob.sync('raw/**/*.svg');
 
 async function buildIcon() {
-  files.flatMap(async fileName => {
+  files.forEach(async (fullName, index) => {
+    const fileName = path.basename(fullName);
     const componentName = `${camelcase(fileName.replace(/.svg/, ''), {
       pascalCase: true,
     })}Icon`;
-    const svgCode = fs.readFileSync(`./raw/${fileName}`, 'utf-8');
+    const svgCode = fs.readFileSync(fullName, 'utf-8');
+
+    console.log(`Number ${index + 1}: start transform...`);
 
     const content = await transform(
       svgCode,
@@ -18,8 +23,6 @@ async function buildIcon() {
         plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
         icon: false,
         svgProps: {
-          width: '24',
-          height: '24',
           fill: 'currentColor',
         },
         replaceAttrValues: { '#00497A': "{props.color || '#00497A'}" },
@@ -30,15 +33,18 @@ async function buildIcon() {
       { componentName: componentName },
     );
 
+    console.log(`Number ${index + 1}: Start write file...`);
     fs.writeFileSync(`src/icons/${componentName}.tsx`, content, 'utf-8');
 
+    console.log(`Number ${index + 1}: Start upadte to entry...`);
     fs.writeFileSync(`src/index.ts`, updateEntry(files), 'utf-8');
   });
 }
 
 function updateEntry(files: string[]) {
   let content = '';
-  files.map(fileName => {
+  files.map(fullName => {
+    const fileName = path.basename(fullName);
     const componentName = `${camelcase(fileName.replace(/.svg/, ''), {
       pascalCase: true,
     })}Icon`;

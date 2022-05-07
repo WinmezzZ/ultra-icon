@@ -7,19 +7,39 @@ import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
 import iconStyle from '../styles';
+import merge from '../utils/merge';
+interface SVGComponentProps extends SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
+const defaultProps = {
+  size: 24,
+};
 
-const AddIcon = (props: SVGProps<SVGSVGElement>) => {
+const AddIcon = (p: SVGComponentProps) => {
+  const { size, ...props } = merge(defaultProps, p);
   return (
-    <span css={iconStyle}>
-      <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="24" height="24" {...props}>
+    <span css={iconStyle} className="ultra-icon">
+      <svg
+        fill="currentColor"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        {...props}
+      >
         <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path
-          stroke="#333"
+        <rect
+          width={36}
+          height={36}
+          x={6}
+          y={6}
+          fill="#2F88FF"
+          stroke="#000"
           strokeLinejoin="round"
           strokeWidth={4}
-          d="M24 44c11.046 0 20-8.954 20-20S35.046 4 24 4 4 12.954 4 24s8.954 20 20 20Z"
+          rx={3}
         />
-        <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M24 16v16m-8-8h16" />
+        <path stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M24 16v16m-8-8h16" />
       </svg>
     </span>
   );

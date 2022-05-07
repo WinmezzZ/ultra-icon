@@ -12,6 +12,7 @@ async function build() {
         target: 'esnext',
       }),
     ],
+    external: id => !/^[./]/.test(id),
   });
 
   bundle.write({

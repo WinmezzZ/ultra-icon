@@ -1,14 +1,21 @@
-import { jsxExpressionContainer } from '@babel/types';
+import { jsxExpressionContainer, stringLiteral } from '@babel/types';
 import { jsxAttribute } from '@babel/types';
 import { identifier, jsxClosingElement, jsxElement, jsxIdentifier, jsxOpeningElement } from '@babel/types';
 import { transform } from '@svgr/core';
 
-type Template = Parameters<typeof transform>['1']['template'];
+type Template = NonNullable<Parameters<typeof transform>['1']>['template'];
 
-const template: Template = ({ imports, interfaces, componentName, props, jsx, exports }: any, { tpl }: any) => {
+const template: Template = ({ imports, interfaces, componentName, props, jsx, exports }, { tpl }) => {
+  jsx.openingElement.attributes.push(
+    ...[
+      jsxAttribute(jsxIdentifier('width'), jsxExpressionContainer(identifier('size'))),
+      jsxAttribute(jsxIdentifier('height'), jsxExpressionContainer(identifier('size'))),
+    ],
+  );
   const wrappedJsx = jsxElement(
     jsxOpeningElement(jsxIdentifier('span'), [
       jsxAttribute(jsxIdentifier('css'), jsxExpressionContainer(identifier('iconStyle'))),
+      jsxAttribute(jsxIdentifier('className'), stringLiteral('ultra-icon')),
     ]),
     jsxClosingElement(jsxIdentifier('span')),
     [jsx],
@@ -22,14 +29,23 @@ const template: Template = ({ imports, interfaces, componentName, props, jsx, ex
 
  /** @jsx jsx */
  import { jsx } from '@emotion/react';
- ${imports};
+ import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
 import iconStyle from '../styles';
+import merge from '../utils/merge';
 
-${interfaces};
+interface SVGComponentProps extends SVGProps<SVGSVGElement> {
+  size?: number | string;
+};
 
-const ${componentName} = (${props}) => {
-  return ${wrappedJsx}
+const defaultProps = {
+  size: 24
+}
+
+const ${componentName} = (p: SVGComponentProps) => {
+  const { size, ...props } = merge(defaultProps, p);
+
+  return ${wrappedJsx};
 };
 
 ${componentName}.propTypes = {
