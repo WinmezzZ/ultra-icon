@@ -3,15 +3,12 @@ import { rollup } from 'rollup';
 import esbuild from 'rollup-plugin-esbuild';
 
 fs.rmSync('es', { recursive: true, force: true });
+fs.rmSync('lib', { recursive: true, force: true });
 
 async function build() {
   const bundle = await rollup({
     input: 'src/index.ts',
-    plugins: [
-      esbuild({
-        target: 'esnext',
-      }),
-    ],
+    plugins: [esbuild()],
     external: id => !/^[./]/.test(id),
   });
 
@@ -19,6 +16,13 @@ async function build() {
     format: 'es',
     dir: 'es',
     preserveModules: true,
+  });
+
+  bundle.write({
+    format: 'cjs',
+    dir: 'lib',
+    preserveModules: true,
+    exports: 'named',
   });
 }
 

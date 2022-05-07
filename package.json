@@ -4,10 +4,16 @@
   "version": "0.0.1",
   "main": "lib/index.js",
   "module": "es/index.js",
-  "typings": "lib/index.d.ts",
+  "typings": "typings/index.d.ts",
   "keywords": [
     "react",
     "icon"
+  ],
+  "files": [
+    "es",
+    "lib",
+    "src",
+    "scripts"
   ],
   "scripts": {
     "generate": "ts-node scripts/generate-icon.ts",

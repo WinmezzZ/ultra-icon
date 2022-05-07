@@ -1,5 +1,7 @@
 import { SVGProps } from 'react';
 
-declare const Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
+interface SVGComponentProps extends SVGProps<SVGSVGElement> {
+  size?: number | string;
+}
 
-export { Icon as default };
+declare const SVGIcon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
