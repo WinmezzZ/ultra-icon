@@ -1,11 +1,17 @@
 import { jsxExpressionContainer, stringLiteral } from '@babel/types';
-import { jsxAttribute } from '@babel/types';
-import { identifier, jsxClosingElement, jsxElement, jsxIdentifier, jsxOpeningElement } from '@babel/types';
+import {
+  jsxAttribute,
+  identifier,
+  jsxClosingElement,
+  jsxElement,
+  jsxIdentifier,
+  jsxOpeningElement,
+} from '@babel/types';
 import { transform } from '@svgr/core';
 
 type Template = NonNullable<Parameters<typeof transform>['1']>['template'];
 
-const template: Template = ({ imports, interfaces, componentName, props, jsx, exports }, { tpl }) => {
+const template: Template = ({ componentName, jsx, exports }, { tpl }) => {
   jsx.openingElement.attributes.push(
     ...[
       jsxAttribute(jsxIdentifier('width'), jsxExpressionContainer(identifier('size'))),
