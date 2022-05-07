@@ -6,6 +6,7 @@ import {
   jsxElement,
   jsxIdentifier,
   jsxOpeningElement,
+  callExpression,
 } from '@babel/types';
 import { transform } from '@svgr/core';
 
@@ -20,7 +21,10 @@ const template: Template = ({ componentName, jsx, exports }, { tpl }) => {
   );
   const wrappedJsx = jsxElement(
     jsxOpeningElement(jsxIdentifier('span'), [
-      jsxAttribute(jsxIdentifier('css'), jsxExpressionContainer(identifier('iconStyle'))),
+      jsxAttribute(
+        jsxIdentifier('css'),
+        jsxExpressionContainer(callExpression(identifier('iconStyle'), [identifier('props')])),
+      ),
       jsxAttribute(jsxIdentifier('className'), stringLiteral('ultra-icon')),
     ]),
     jsxClosingElement(jsxIdentifier('span')),
@@ -42,6 +46,7 @@ import merge from '../utils/merge';
 
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
+  filled?: boolean;
 };
 
 const defaultProps = {
@@ -49,13 +54,13 @@ const defaultProps = {
 }
 
 const ${componentName} = (p: SVGComponentProps) => {
-  const { size, ...props } = merge(defaultProps, p);
+  const { size, filled, ...props } = merge(defaultProps, p);
 
   return ${wrappedJsx};
 };
 
 ${componentName}.propTypes = {
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 ${exports};

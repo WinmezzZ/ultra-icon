@@ -16,5 +16,5 @@
 <path d="M3 24H6.15" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.15076 9.15076L11.3781 11.3781L9.15076 9.15076Z" fill="black"/>
 <path d="M9.15076 9.15076L11.3781 11.3781" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24 36C30.6274 36 36 30.6274 36 24C36 17.3726 30.6274 12 24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36Z" fill="#2F88FF" stroke="black" stroke-width="4" stroke-linejoin="round"/>
+<path d="M24 36C30.6274 36 36 30.6274 36 24C36 17.3726 30.6274 12 24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36Z" fill="null" stroke="black" stroke-width="4" stroke-linejoin="round"/>
 </svg>

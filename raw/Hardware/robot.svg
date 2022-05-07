@@ -5,7 +5,7 @@
 <path d="M15 9L20 17" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="34" cy="7" r="2" stroke="black" stroke-width="4"/>
 <circle cx="14" cy="7" r="2" stroke="black" stroke-width="4"/>
-<rect x="16" y="24" width="16" height="8" rx="4" fill="#2F88FF" stroke="black" stroke-width="4"/>
+<rect x="16" y="24" width="16" height="8" rx="4" fill="null" stroke="black" stroke-width="4"/>
 <path d="M9 24H4V34H9" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M39 24H44V34H39" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

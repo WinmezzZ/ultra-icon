@@ -6,5 +6,5 @@
     <path d="M14 34H20" stroke="black" stroke-width="4" stroke-linecap="round"/>
     <path d="M17 20L17 14" stroke="black" stroke-width="4" stroke-linecap="round"/>
     <path d="M37.728 37.728L41.9707 41.9707" stroke="black" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="33.4854" cy="33.4853" r="6" transform="rotate(45 33.4854 33.4853)" fill="#2F88FF" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="33.4854" cy="33.4853" r="6" transform="rotate(45 33.4854 33.4853)" fill="null" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

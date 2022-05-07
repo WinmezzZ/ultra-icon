@@ -3,5 +3,5 @@
 <path d="M19 6V23.5238L5 28" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M19 24L31 28" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M37 18V42" stroke="black" stroke-width="4" stroke-linecap="round"/>
-<path d="M31 13.3333C31 7.11111 35 4 37 4C39 4 43 7.11111 43 13.3333C43 19.5556 31 19.5556 31 13.3333Z" fill="#2F88FF" stroke="black" stroke-width="4"/>
+<path d="M31 13.3333C31 7.11111 35 4 37 4C39 4 43 7.11111 43 13.3333C43 19.5556 31 19.5556 31 13.3333Z" fill="null" stroke="black" stroke-width="4"/>
 </svg>

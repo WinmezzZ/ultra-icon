@@ -3,7 +3,7 @@
 <path d="M16 12V40" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M28 12V29" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M28 12V6C28 4.89543 27.1046 4 26 4H18C16.8954 4 16 4.89543 16 6V12" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M35 44C39.9706 44 44 39.9706 44 35C44 30.0294 39.9706 26 35 26C30.0294 26 26 30.0294 26 35C26 39.9706 30.0294 44 35 44Z" fill="#2F88FF" stroke="black" stroke-width="4"/>
-<path d="M34 32V36H38" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M35 44C39.9706 44 44 39.9706 44 35C44 30.0294 39.9706 26 35 26C30.0294 26 26 30.0294 26 35C26 39.9706 30.0294 44 35 44Z" fill="null" stroke="black" stroke-width="4"/>
+<path d="M34 32V36H38" stroke="#333" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M13 40V44" stroke="black" stroke-width="4" stroke-linecap="round"/>
 </svg>

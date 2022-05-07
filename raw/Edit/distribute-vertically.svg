@@ -4,7 +4,7 @@
 <rect width="48" height="48" fill="white"/>
 </mask>
 <g mask="url(#mask0)">
-<rect x="38" y="30" width="28" height="12" transform="rotate(180 38 30)" fill="#2F88FF" stroke="black" stroke-width="4" stroke-linejoin="round"/>
+<rect x="38" y="30" width="28" height="12" transform="rotate(180 38 30)" fill="null" stroke="black" stroke-width="4" stroke-linejoin="round"/>
 <path d="M42 40H6" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M42 8L6 8" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </g>

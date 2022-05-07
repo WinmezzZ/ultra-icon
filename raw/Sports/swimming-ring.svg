@@ -7,8 +7,8 @@
 <path d="M7.02429 30C8.832 35.1145 12.8856 39.1681 18.0001 40.9758" stroke="black" stroke-width="4" stroke-linecap="round"/>
 <path d="M18.0001 7.02423C12.8856 8.83194 8.832 12.8855 7.02429 18" stroke="black" stroke-width="4" stroke-linecap="round"/>
 <path d="M30 7.02423C35.1145 8.83194 39.1681 12.8855 40.9758 18" stroke="black" stroke-width="4" stroke-linecap="round"/>
-<path d="M27 17H21L18 7L20 4H28L30 7L27 17Z" fill="#2F88FF" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
-<path d="M17 21V27L7 30L4 28L4 20L7 18L17 21Z" fill="#2F88FF" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
-<path d="M21 31H27L30 41L28 44H20L18 41L21 31Z" fill="#2F88FF" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
-<path d="M31 27V21L41 18C42.08 18.8 42.92 19.2 44 20V28C42.92 28.8 42.08 29.2 41 30L31 27Z" fill="#2F88FF" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
+<path d="M27 17H21L18 7L20 4H28L30 7L27 17Z" fill="null" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
+<path d="M17 21V27L7 30L4 28L4 20L7 18L17 21Z" fill="null" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
+<path d="M21 31H27L30 41L28 44H20L18 41L21 31Z" fill="null" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
+<path d="M31 27V21L41 18C42.08 18.8 42.92 19.2 44 20V28C42.92 28.8 42.08 29.2 41 30L31 27Z" fill="null" stroke="black" stroke-width="4" stroke-miterlimit="2" stroke-linejoin="round"/>
 </svg>

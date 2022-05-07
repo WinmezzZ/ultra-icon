@@ -9,6 +9,6 @@
 <path d="M41.8945 37.0056L42.1036 38.9946" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M4.89453 38.9946L5.10359 37.0056" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M42.0003 10L9 18" stroke="black" stroke-width="4" stroke-linecap="round"/>
-<path d="M16 7L29 13L17 16L12 9L16 7Z" fill="#2F88FF" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 7L29 13L17 16L12 9L16 7Z" fill="null" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M9 18L6 14" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
