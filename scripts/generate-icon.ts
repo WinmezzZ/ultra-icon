@@ -8,12 +8,21 @@ import template from './template';
 const files = glob.sync('raw/**/*.svg');
 
 async function buildIcon() {
+  const dataMap: Record<string, any> = {};
+
   files.forEach(async (fullName, index) => {
     const fileName = path.basename(fullName);
-    const componentName = `${camelcase(fileName.replace(/.svg/, ''), {
+    const svgName = fileName.replace(/.svg/, '');
+    const componentName = `${camelcase(svgName, {
       pascalCase: true,
     })}Icon`;
     const svgCode = fs.readFileSync(fullName, 'utf-8');
+
+    dataMap[fileName] = {
+      id: index,
+      name: svgName,
+      svg: svgCode,
+    };
 
     console.log(`Number ${index + 1}: start transform...`);
 
@@ -39,6 +48,8 @@ async function buildIcon() {
     console.log(`Number ${index + 1}: Start upadte to entry...`);
     fs.writeFileSync(`src/index.ts`, updateEntry(files), 'utf-8');
   });
+
+  fs.writeFileSync(`src/icons.json`, JSON.stringify(dataMap, null, 2), 'utf-8');
 }
 
 function updateEntry(files: string[]) {

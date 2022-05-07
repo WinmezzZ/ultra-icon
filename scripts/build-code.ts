@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { execSync } from 'child_process';
 import { rollup } from 'rollup';
 import esbuild from 'rollup-plugin-esbuild';
 
@@ -12,18 +13,26 @@ async function build() {
     external: id => !/^[./]/.test(id),
   });
 
-  bundle.write({
-    format: 'es',
-    dir: 'es',
-    preserveModules: true,
-  });
+  bundle
+    .write({
+      format: 'es',
+      dir: 'es',
+      preserveModules: true,
+    })
+    .then(() => {
+      execSync(`cp src/icons.json es`);
+    });
 
-  bundle.write({
-    format: 'cjs',
-    dir: 'lib',
-    preserveModules: true,
-    exports: 'named',
-  });
+  bundle
+    .write({
+      format: 'cjs',
+      dir: 'lib',
+      preserveModules: true,
+      exports: 'named',
+    })
+    .then(() => {
+      execSync(`cp src/icons.json lib`);
+    });
 }
 
 build();

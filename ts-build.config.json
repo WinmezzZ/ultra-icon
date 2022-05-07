@@ -4,7 +4,8 @@
     "skipLibCheck": true,
     "declaration": true,
     "emitDeclarationOnly": true,
-    "declarationDir": "lib"
+    "declarationDir": "es"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["scripts"]
 }
