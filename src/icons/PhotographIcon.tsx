@@ -20,14 +20,7 @@ const PhotographIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <g stroke="#000" strokeLinecap="round" strokeWidth={4} clipPath="url(#prefix__a)">
           <path strokeLinejoin="bevel" d="M34 13V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h15" />
           <path

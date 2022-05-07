@@ -20,14 +20,7 @@ const GarageIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M6 5h36v38H6z" />
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M12 12h24v6H12z" />
         <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="M16 18v25m16-25v25M16 24h16m-16 6h16m-16 6h16" />

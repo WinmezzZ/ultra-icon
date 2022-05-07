@@ -20,14 +20,7 @@ const HandPaintedPlateIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeWidth={4} d="M18 10h24a2 2 0 0 1 2 2v26a2 2 0 0 1-2 2H18" />
         <path fill="null" stroke="#000" strokeWidth={4} d="M4 12a2 2 0 0 1 2-2h12v30H6a2 2 0 0 1-2-2V12Z" />
         <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M11 17v4" />

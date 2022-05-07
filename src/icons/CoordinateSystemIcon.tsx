@@ -20,14 +20,7 @@ const CoordinateSystemIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="m24 12 14 8v16l-14 8-14-8V20l14-8Z" />
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M24 6v6" />
         <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="m10 20 14 8 14-8" />

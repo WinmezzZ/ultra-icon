@@ -20,14 +20,7 @@ const PetrolIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M42 42V6h-3l-9 10H12l-6 6v20h36Z" />
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M12 16 22 6h18" />
         <path

@@ -20,14 +20,7 @@ const CakeOneIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M27 14 9 21.9h30L34 15" />
         <circle cx={31} cy={13} r={4} fill="#fff" stroke="#000" strokeWidth={4} />
         <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="m33 9 2-5" />

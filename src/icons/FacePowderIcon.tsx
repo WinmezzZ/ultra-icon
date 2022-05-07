@@ -20,14 +20,7 @@ const FacePowderIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <ellipse cx={24} cy={30} fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} rx={16} ry={6} />
         <ellipse cx={24} cy={14} fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} rx={16} ry={10} />
         <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="m23 10-5 3m12 1-5 3" />

@@ -20,14 +20,7 @@ const PrinterTwoIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="M38 20V8a2 2 0 0 0-2-2H12a2 2 0 0 0-2 2v12" />
         <rect width={36} height={22} x={6} y={20} stroke="#000" strokeWidth={4} rx={2} />
         <path

@@ -20,14 +20,7 @@ const SplitBranchIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
         <path fill="null" d="M44 44V4H24v13l9 9v18h11ZM4 4v40h21V30l-9-9V4H4Z" />
         <path

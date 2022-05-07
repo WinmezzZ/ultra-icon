@@ -20,14 +20,7 @@ const RiceIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="null" stroke="#000" strokeWidth={4} d="M24 38c9.389 0 17-7.059 17-17H7c0 9.941 7.611 17 17 17Z" />
         <path stroke="#000" strokeWidth={4} d="M30 21c0-5.523-4.253-10-9.5-10S11 15.477 11 21" />
         <path stroke="#000" strokeWidth={4} d="M39 21c0-3.314-2.766-6-6.178-6-1.443 0-2.77.48-3.822 1.286" />

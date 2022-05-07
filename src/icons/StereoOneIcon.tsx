@@ -20,14 +20,7 @@ const StereoOneIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <rect width={30} height={38} x={9} y={5} stroke="#000" strokeWidth={4} rx={2} />
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M9 18h30" />
         <circle cx={24} cy={30} r={6} fill="null" stroke="#000" strokeWidth={4} />

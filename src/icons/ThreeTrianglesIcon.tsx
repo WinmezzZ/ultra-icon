@@ -20,14 +20,7 @@ const ThreeTrianglesIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
         <path fill="null" d="m17 7 7 12.124L29.99 29.5H4.01L17 7Z" />
         <path fill="null" d="m31 7 12.99 22.5H18.01L24 19.124 31 7ZM11.01 41.5h25.98l-7-12H18.01l-7 12Z" />

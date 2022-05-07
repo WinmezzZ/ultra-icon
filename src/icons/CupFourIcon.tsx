@@ -20,14 +20,7 @@ const CupFourIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M14 25c0 2 1.071 7 15 7s15-5 15-7V10H14v15Z" />
         <path
           stroke="#000"

@@ -20,14 +20,7 @@ const ShoppingCartOneIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <circle cx={20.5} cy={41.5} r={3.5} fill="#000" />
         <circle cx={37.5} cy={41.5} r={3.5} fill="#000" />
         <path

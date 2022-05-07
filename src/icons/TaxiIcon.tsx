@@ -20,14 +20,7 @@ const TaxiIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        fill="currentColor"
-        {...props}
-      >
+      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
         <g fill="none" fillRule="evenodd">
           <g transform="translate(4 11)">
             <path

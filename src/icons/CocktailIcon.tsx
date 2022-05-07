@@ -20,14 +20,7 @@ const CocktailIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <g stroke="#000" strokeLinecap="round" strokeWidth={4} clipPath="url(#prefix__a)">
           <path strokeLinejoin="round" d="M35.8 13H32L21 32 9.8 13H6" />
           <path d="M25.75 25.596c5.602 3.15 12.696 1.164 15.846-4.437 3.15-5.6 1.165-12.695-4.436-15.845-5.601-3.15-12.695-1.164-15.846 4.437" />

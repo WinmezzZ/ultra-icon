@@ -20,14 +20,7 @@ const GoproIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 7h13v34H5z" />
         <rect width={19} height={22} x={24} y={13} fill="null" stroke="#000" strokeWidth={4} rx={3} />
         <circle cx={33.5} cy={24.5} r={3.5} fill="null" stroke="#333" strokeWidth={4} />

@@ -20,14 +20,7 @@ const DropboxIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <g stroke="#000" strokeLinejoin="round" strokeWidth={4} clipPath="url(#prefix__a)">
           <path fill="null" d="m24 10-12 8 12 8 12-8-12-8Z" />
           <path d="m24 10 12 8 5-7-11-7-6 6Zm0 0-12 8-5-7 11-7 6 6Zm19 12-7-4-12 8 7 5 12-9ZM5 22l7-4 12 8-7 5-12-9Z" />

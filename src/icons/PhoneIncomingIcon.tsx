@@ -20,14 +20,7 @@ const PhoneIncomingIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 51 51"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 51 51" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="#fff" fillOpacity={0.01} d="M2 0h48v48H2z" />
         <path fill="#fff" fillOpacity={0.01} d="M3 0h48v48H3z" />
         <path

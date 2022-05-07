@@ -20,14 +20,7 @@ const HarmIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 49"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 49" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
         <path fill="#fff" fillOpacity={0.01} d="M48 1H0v48h48V1Z" />
         <path

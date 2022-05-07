@@ -20,14 +20,7 @@ const PicOneIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <circle cx={24} cy={25} r={20} stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} />
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="m9 38 8-9 16 13" />
         <circle cx={18} cy={18} r={4} fill="null" stroke="#000" strokeWidth={4} />

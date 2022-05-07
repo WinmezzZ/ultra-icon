@@ -20,14 +20,7 @@ const HuoshanzhiboIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path
           fill="#000"
           d="M35.393 16.04c-3.284-.697-5.573-3.582-5.622-6.916h-5.075v20.448c-.1 2.338-2.04 4.18-4.378 4.13-2.338-.05-4.18-1.99-4.18-4.329.05-2.338 1.941-4.229 4.28-4.229.447 0 .845.05 1.243.2v-5.225c-.398-.05-.846-.05-1.244-.05h-.199c-5.174.15-9.253 4.379-9.154 9.553.1 5.174 4.329 9.254 9.503 9.204 5.174-.05 9.303-4.279 9.303-9.403V19.025a12.13 12.13 0 0 0 7.115 2.288V16.19a7.83 7.83 0 0 1-1.592-.15Z"

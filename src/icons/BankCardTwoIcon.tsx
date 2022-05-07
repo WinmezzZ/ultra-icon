@@ -20,14 +20,7 @@ const BankCardTwoIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M44 18V8H4v10" />
         <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M4 18h40v22H4z" />

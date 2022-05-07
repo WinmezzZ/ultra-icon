@@ -20,14 +20,7 @@ const RattleIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <g stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} clipPath="url(#prefix__a)">
           <circle cx={30.075} cy={15.562} r={11} fill="null" transform="rotate(40 30.075 15.562)" />
           <path d="M21.648 8.492c-4.61.048-6.326-3.35-8.576-.67-2.033 2.423.493 5.636-1.435 7.934m13.665 10.161-5.785 6.895c-1.607 1.915-1.682 5.115-3.61 7.413-1.928 2.299-4.746 2.545-7.044.617-2.298-1.929-2.545-4.746-.617-7.044 1.929-2.299 5.068-2.928 6.675-4.843 1.607-1.915 5.163-5.894 5.785-6.895" />

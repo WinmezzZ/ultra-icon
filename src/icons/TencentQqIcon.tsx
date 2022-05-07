@@ -20,14 +20,7 @@ const TencentQqIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path
           fill="#000"
           d="M23.794 44.518c-3.659 0-7.017-1.225-9.179-3.053-1.098.328-2.502.855-3.389 1.51-.759.56-.664 1.13-.527 1.361.6 1.013 10.296.647 13.095.332v-.15Zm0 0c3.659 0 7.016-1.225 9.179-3.053 1.097.328 2.502.855 3.389 1.51.758.56.663 1.13.526 1.361-.6 1.013-10.295.647-13.094.332v-.15Z"

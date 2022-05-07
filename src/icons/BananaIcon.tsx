@@ -20,14 +20,7 @@ const BananaIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <g stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} clipPath="url(#prefix__a)">
           <path d="M16 32c-2.8-.933-6.034-3.173-7.476-5.425a1.716 1.716 0 0 1-.244-1.043l.245-3.75c.053-.81 1.01-1.24 1.671-.77C12.33 22.529 16.229 25 19 25c7 0 13-2.5 16-8" />
           <path

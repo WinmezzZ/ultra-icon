@@ -20,14 +20,7 @@ const TrumpetIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path fill="null" stroke="#000" strokeWidth={4} d="M32 28h6v11a3 3 0 1 1-6 0V28Z" />
         <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="M29 12h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H28" />
         <path stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M14 14h-2a6 6 0 0 0 0 12h2" />

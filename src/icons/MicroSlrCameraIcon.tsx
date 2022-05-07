@@ -20,14 +20,7 @@ const MicroSlrCameraIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path
           fill="null"
           d="M44 26c0 2.64-.73 5.108-2 7.215A14.073 14.073 0 0 1 37.215 38c-2.107 1.27-4.576 2-7.215 2-2.64 0-5.108-.73-7.215-2C18.719 35.55 16 31.093 16 26s2.72-9.55 6.785-12c2.107-1.27 4.576-2 7.215-2 2.64 0 5.108.73 7.215 2A14.073 14.073 0 0 1 42 18.785c1.27 2.107 2 4.576 2 7.215Z"

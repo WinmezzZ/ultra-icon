@@ -20,14 +20,7 @@ const LightHouseIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M6 44h36M17 20h14" />
         <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M19 20h10l3 24H16l3-24Z" />
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="m19 9 2 11h6l2-11" />

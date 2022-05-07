@@ -20,14 +20,7 @@ const FanqiexiaoshuoIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path
           fill="#000"
           d="M35.429 4.884c4.217 0 7.653 3.436 7.653 7.653V35.43c0 4.217-3.436 7.653-7.653 7.653H12.537c-4.217 0-7.653-3.436-7.653-7.653V12.537c0-4.217 3.436-7.653 7.653-7.653H35.43Zm0-.884H12.537A8.521 8.521 0 0 0 4 12.537V35.43a8.521 8.521 0 0 0 8.537 8.537H35.43a8.521 8.521 0 0 0 8.537-8.537V12.537C44 7.81 40.156 4 35.429 4Z"

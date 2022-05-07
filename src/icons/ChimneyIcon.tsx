@@ -20,14 +20,7 @@ const ChimneyIcon = (p: SVGComponentProps) => {
   const { size, filled, ...props } = merge(defaultProps, p);
   return (
     <span css={iconStyle(props)} className="ultra-icon">
-      <svg
-        fill="currentColor"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        width={size}
-        height={size}
-        {...props}
-      >
+      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
         <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M4 44h40M13 14h22" />
         <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M16 14h16l4 30H12l4-30Z" />
         <path stroke="#333" strokeLinecap="round" strokeWidth={4} d="M15 24h18M13 34h22" />
