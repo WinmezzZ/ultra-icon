@@ -6,29 +6,23 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const DotIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const DotIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path fill="#000" stroke="#000" strokeWidth={4} d="M24 33a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+      <path fill="#000" stroke="#000" strokeWidth={4} d="M24 33a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
+    </svg>
   );
 };
 
-DotIcon.propTypes = {
+DotIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const DotIcon = withWrapper(DotIconComponent);
 export default DotIcon;

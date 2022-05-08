@@ -6,34 +6,28 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const FullScreenIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const FullScreenIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path
-          stroke="#000"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M33 6h9v9m0 18v9h-9m-18 0H6v-9m0-18V6h9"
-        />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M33 6h9v9m0 18v9h-9m-18 0H6v-9m0-18V6h9"
+      />
+    </svg>
   );
 };
 
-FullScreenIcon.propTypes = {
+FullScreenIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const FullScreenIcon = withWrapper(FullScreenIconComponent);
 export default FullScreenIcon;

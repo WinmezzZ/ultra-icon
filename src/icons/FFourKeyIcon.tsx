@@ -6,46 +6,40 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const FFourKeyIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const FFourKeyIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <rect
-          width={36}
-          height={36}
-          x={6}
-          y={6}
-          fill="null"
-          stroke="#000"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          rx={3}
-        />
-        <path
-          stroke="#333"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M32.733 32V16L26 26.397v1.619h9M21 16h-7v16m0-8h7"
-        />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <rect
+        width={36}
+        height={36}
+        x={6}
+        y={6}
+        fill="null"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        rx={3}
+      />
+      <path
+        stroke="#333"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M32.733 32V16L26 26.397v1.619h9M21 16h-7v16m0-8h7"
+      />
+    </svg>
   );
 };
 
-FFourKeyIcon.propTypes = {
+FFourKeyIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const FFourKeyIcon = withWrapper(FFourKeyIconComponent);
 export default FFourKeyIcon;

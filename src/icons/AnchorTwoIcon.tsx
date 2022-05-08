@@ -6,45 +6,39 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const AnchorTwoIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const AnchorTwoIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path
-          stroke="#000"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M10 24H4c0 11.046 8.954 20 20 20s20-8.954 20-20h-6M24 44V14"
-        />
-        <path
-          fill="null"
-          fillRule="evenodd"
-          stroke="#000"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M24 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"
-          clipRule="evenodd"
-        />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M10 24H4c0 11.046 8.954 20 20 20s20-8.954 20-20h-6M24 44V14"
+      />
+      <path
+        fill="null"
+        fillRule="evenodd"
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M24 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"
+        clipRule="evenodd"
+      />
+    </svg>
   );
 };
 
-AnchorTwoIcon.propTypes = {
+AnchorTwoIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const AnchorTwoIcon = withWrapper(AnchorTwoIconComponent);
 export default AnchorTwoIcon;

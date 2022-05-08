@@ -6,28 +6,22 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const MoveOneIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const MoveOneIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="m8 6 35 19-19 2-10.005 17L8 6Z" />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="m8 6 35 19-19 2-10.005 17L8 6Z" />
+    </svg>
   );
 };
 
-MoveOneIcon.propTypes = {
+MoveOneIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const MoveOneIcon = withWrapper(MoveOneIconComponent);
 export default MoveOneIcon;

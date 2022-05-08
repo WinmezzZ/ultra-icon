@@ -6,37 +6,31 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const ChargingTreasureIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const ChargingTreasureIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path
-          stroke="#000"
-          strokeLinecap="round"
-          strokeWidth={4}
-          d="M42.085 35 38.957 8.646A3 3 0 0 0 35.978 6H12.943a3 3 0 0 0-2.968 2.557L6.023 35"
-        />
-        <rect width={36} height={12} x={6} y={30} fill="null" stroke="#000" strokeWidth={4} rx={6} />
-        <rect width={4} height={4} x={19} y={34} fill="#fff" rx={2} />
-        <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M29 36h6" />
-        <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M22 12h4" />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeWidth={4}
+        d="M42.085 35 38.957 8.646A3 3 0 0 0 35.978 6H12.943a3 3 0 0 0-2.968 2.557L6.023 35"
+      />
+      <rect width={36} height={12} x={6} y={30} fill="null" stroke="#000" strokeWidth={4} rx={6} />
+      <rect width={4} height={4} x={19} y={34} fill="#fff" rx={2} />
+      <path stroke="#333" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M29 36h6" />
+      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M22 12h4" />
+    </svg>
   );
 };
 
-ChargingTreasureIcon.propTypes = {
+ChargingTreasureIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const ChargingTreasureIcon = withWrapper(ChargingTreasureIconComponent);
 export default ChargingTreasureIcon;

@@ -6,36 +6,30 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const MultiTriangularFourIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const MultiTriangularFourIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path fill="#fff" fillOpacity={0.01} d="M48 0H0v48h48V0Z" />
-        <path
-          stroke="#000"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M4 41h40L24 6 4 41ZM24 6v35M14 24l30 17M34 24 4 41"
-        />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+      <path fill="#fff" fillOpacity={0.01} d="M48 0H0v48h48V0Z" />
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M4 41h40L24 6 4 41ZM24 6v35M14 24l30 17M34 24 4 41"
+      />
+    </svg>
   );
 };
 
-MultiTriangularFourIcon.propTypes = {
+MultiTriangularFourIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const MultiTriangularFourIcon = withWrapper(MultiTriangularFourIconComponent);
 export default MultiTriangularFourIcon;

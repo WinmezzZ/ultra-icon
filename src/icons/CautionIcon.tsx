@@ -6,38 +6,32 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const CautionIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const CautionIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path
-          fill="null"
-          fillRule="evenodd"
-          stroke="#000"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M24 5 2 43h44L24 5Z"
-          clipRule="evenodd"
-        />
-        <path stroke="#333" strokeLinecap="round" strokeWidth={4} d="M24 35v1m0-17 .008 10" />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+      <path
+        fill="null"
+        fillRule="evenodd"
+        stroke="#000"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M24 5 2 43h44L24 5Z"
+        clipRule="evenodd"
+      />
+      <path stroke="#333" strokeLinecap="round" strokeWidth={4} d="M24 35v1m0-17 .008 10" />
+    </svg>
   );
 };
 
-CautionIcon.propTypes = {
+CautionIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const CautionIcon = withWrapper(CautionIconComponent);
 export default CautionIcon;

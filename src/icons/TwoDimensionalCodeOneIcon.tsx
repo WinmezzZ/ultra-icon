@@ -6,35 +6,29 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const TwoDimensionalCodeOneIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const TwoDimensionalCodeOneIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path
-          fill="null"
-          stroke="#000"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M18 6H6v12h12V6Zm0 24H6v12h12V30Zm24 0H30v12h12V30Zm0-24H30v12h12V6Z"
-        />
-        <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="M24 6v18m0 6v12m0-18H6m36 0H30" />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path
+        fill="null"
+        stroke="#000"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M18 6H6v12h12V6Zm0 24H6v12h12V30Zm24 0H30v12h12V30Zm0-24H30v12h12V6Z"
+      />
+      <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="M24 6v18m0 6v12m0-18H6m36 0H30" />
+    </svg>
   );
 };
 
-TwoDimensionalCodeOneIcon.propTypes = {
+TwoDimensionalCodeOneIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const TwoDimensionalCodeOneIcon = withWrapper(TwoDimensionalCodeOneIconComponent);
 export default TwoDimensionalCodeOneIcon;

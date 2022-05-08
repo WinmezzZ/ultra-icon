@@ -6,56 +6,50 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const TableFileIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const TableFileIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
-        <g fill="none" fillRule="evenodd">
-          <path fill="#FFF" fillOpacity={0.01} d="M0 0h48v48H0z" />
-          <rect
-            width={40}
-            height={36}
-            x={4}
-            y={6}
-            fill="null"
-            fillRule="nonzero"
-            stroke="#000"
-            strokeLinejoin="round"
-            strokeWidth={4}
-            rx={2}
-          />
-          <path
-            stroke="#FFF"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={4}
-            d="M4 18h40m-26.5 0v24m13-24v24M4 30h40"
-          />
-          <path
-            stroke="#000"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={4}
-            d="M44 8v32a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8"
-          />
-        </g>
-      </svg>
-    </span>
+    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <g fill="none" fillRule="evenodd">
+        <path fill="#FFF" fillOpacity={0.01} d="M0 0h48v48H0z" />
+        <rect
+          width={40}
+          height={36}
+          x={4}
+          y={6}
+          fill="null"
+          fillRule="nonzero"
+          stroke="#000"
+          strokeLinejoin="round"
+          strokeWidth={4}
+          rx={2}
+        />
+        <path
+          stroke="#FFF"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={4}
+          d="M4 18h40m-26.5 0v24m13-24v24M4 30h40"
+        />
+        <path
+          stroke="#000"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={4}
+          d="M44 8v32a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8"
+        />
+      </g>
+    </svg>
   );
 };
 
-TableFileIcon.propTypes = {
+TableFileIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const TableFileIcon = withWrapper(TableFileIconComponent);
 export default TableFileIcon;

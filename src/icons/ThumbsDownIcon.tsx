@@ -6,42 +6,36 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const ThumbsDownIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const ThumbsDownIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path
-          stroke="#000"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M20.38 29.4v7.2a5.4 5.4 0 0 0 5.4 5.4l7.2-16.2V6H12.064a3.6 3.6 0 0 0-3.6 3.06L5.98 25.26a3.6 3.6 0 0 0 3.6 4.14h10.8Z"
-        />
-        <path
-          fill="null"
-          stroke="#000"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M32.98 6h4.806a4.158 4.158 0 0 1 4.194 3.6v12.6c-.283 2.09-2.086 3.837-4.194 3.8H32.98V6Z"
-        />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
+      <path
+        stroke="#000"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M20.38 29.4v7.2a5.4 5.4 0 0 0 5.4 5.4l7.2-16.2V6H12.064a3.6 3.6 0 0 0-3.6 3.06L5.98 25.26a3.6 3.6 0 0 0 3.6 4.14h10.8Z"
+      />
+      <path
+        fill="null"
+        stroke="#000"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M32.98 6h4.806a4.158 4.158 0 0 1 4.194 3.6v12.6c-.283 2.09-2.086 3.837-4.194 3.8H32.98V6Z"
+      />
+    </svg>
   );
 };
 
-ThumbsDownIcon.propTypes = {
+ThumbsDownIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const ThumbsDownIcon = withWrapper(ThumbsDownIconComponent);
 export default ThumbsDownIcon;

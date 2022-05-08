@@ -6,31 +6,25 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const SuperscriptIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const SuperscriptIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path
-          fill="currentColor"
-          d="M22 7h-2v1h3v1h-4V7c0-.55.45-1 1-1h2V5h-3V4h3c.55 0 1 .45 1 1v1c0 .55-.45 1-1 1zM5.88 20h2.66l3.4-5.42h.12l3.4 5.42h2.66l-4.65-7.27L17.81 6h-2.68l-3.07 4.99h-.12L8.85 6H6.19l4.32 6.73L5.88 20z"
-        />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path
+        fill="#333"
+        d="M238.763 213.333 448 466.261l209.237-252.928H768L503.381 533.205 768 853.077v.256H657.493L448 600.15 238.507 853.333H128v-.256l264.619-319.872L128 213.333h110.763zm680.704 67.414a34.133 34.133 0 1 0-56.32-15.36l-49.28 14.08A85.376 85.376 0 0 1 896 170.667a85.333 85.333 0 0 1 58.581 147.37L885.077 384h96.256v42.667H810.667V384l108.8-103.253z"
+      />
+    </svg>
   );
 };
 
-SuperscriptIcon.propTypes = {
+SuperscriptIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const SuperscriptIcon = withWrapper(SuperscriptIconComponent);
 export default SuperscriptIcon;

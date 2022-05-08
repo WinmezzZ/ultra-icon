@@ -7,6 +7,8 @@ import template from './template';
 
 const files = glob.sync('raw/*.svg');
 
+// const files = ['raw/abdominal.svg'];
+
 async function buildIcon() {
   const dataMap: Record<string, any> = {};
 

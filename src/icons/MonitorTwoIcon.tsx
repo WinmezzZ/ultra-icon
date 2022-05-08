@@ -6,34 +6,28 @@
 import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
-import iconStyle from '../styles';
-import merge from '../utils/merge';
+import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const defaultProps = {
-  size: 24,
-};
-
-const MonitorTwoIcon = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = merge(defaultProps, p);
+const MonitorTwoIconComponent = (p: SVGComponentProps) => {
+  const { size, filled, ...props } = p;
   return (
-    <span css={iconStyle(props)} className="ultra-icon">
-      <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-        <path
-          stroke="#000"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M42.5 16.387a20.018 20.018 0 0 0-4-6.162A19.943 19.943 0 0 0 24 4C12.954 4 4 12.954 4 24h10l5 8 9-18 7 10h9c0 11.046-8.954 20-20 20-5.45 0-10.393-2.18-14-5.717A20.04 20.04 0 0 1 5.664 32"
-        />
-      </svg>
-    </span>
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
+      <path
+        stroke="#000"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={4}
+        d="M42.5 16.387a20.018 20.018 0 0 0-4-6.162A19.943 19.943 0 0 0 24 4C12.954 4 4 12.954 4 24h10l5 8 9-18 7 10h9c0 11.046-8.954 20-20 20-5.45 0-10.393-2.18-14-5.717A20.04 20.04 0 0 1 5.664 32"
+      />
+    </svg>
   );
 };
 
-MonitorTwoIcon.propTypes = {
+MonitorTwoIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
+const MonitorTwoIcon = withWrapper(MonitorTwoIconComponent);
 export default MonitorTwoIcon;
