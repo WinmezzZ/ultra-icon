@@ -1,21 +1,17 @@
 /**
  * 这些代码由 UltraIcons 自动生成，请勿改动。
  */
-
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
 import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
-  filled?: boolean;
 }
 const Edit2LineIconComponent = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = p;
+  const { size, ...props } = p;
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
-      <path fill="none" d="M0 0h24v24H0z" />
+      <path fill="currentColor" d="M0 0h24v24H0z" />
       <path d="M5 19h1.414l9.314-9.314-1.414-1.414L5 17.586V19zm16 2H3v-4.243L16.435 3.322a1 1 0 0 1 1.414 0l2.829 2.829a1 1 0 0 1 0 1.414L9.243 19H21v2zM15.728 6.858l1.414 1.414 1.414-1.414-1.414-1.414-1.414 1.414z" />
     </svg>
   );

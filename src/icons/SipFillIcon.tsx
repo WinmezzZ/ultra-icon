@@ -1,21 +1,17 @@
 /**
  * 这些代码由 UltraIcons 自动生成，请勿改动。
  */
-
-/** @jsx jsx */
-import { jsx } from '@emotion/react';
 import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
 import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
-  filled?: boolean;
 }
 const SipFillIconComponent = (p: SVGComponentProps) => {
-  const { size, filled, ...props } = p;
+  const { size, ...props } = p;
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
-      <path fill="none" d="M0 0h24v24H0z" />
+      <path fill="currentColor" d="M0 0h24v24H0z" />
       <path d="m13.96 6.504 2.829-2.828a1 1 0 0 1 1.414 0l2.121 2.121a1 1 0 0 1 0 1.414l-2.828 2.829 1.767 1.768-1.414 1.414-7.07-7.071 1.413-1.414 1.768 1.767zM10.778 8.98l4.243 4.243L7.243 21H3v-4.243l7.778-7.778z" />
     </svg>
   );
