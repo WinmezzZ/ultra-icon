@@ -11,7 +11,7 @@ const FilterFillIconComponent = (p: SVGComponentProps) => {
   const { size, ...props } = p;
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
-      <path fill="currentColor" d="M0 0h24v24H0z" />
+      <path fill="none" d="M0 0h24v24H0z" />
       <path d="M21 4v2h-1l-6 9v7h-4v-7L4 6H3V4z" />
     </svg>
   );

@@ -11,7 +11,7 @@ const HammerFillIconComponent = (p: SVGComponentProps) => {
   const { size, ...props } = p;
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
-      <path fill="currentColor" d="M0 0h24v24H0z" />
+      <path fill="none" d="M0 0h24v24H0z" />
       <path d="M17 8V2h3a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1h-3zm-2 14a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1V8H2.5V6.074a1 1 0 0 1 .496-.863L8.5 2H15v20z" />
     </svg>
   );

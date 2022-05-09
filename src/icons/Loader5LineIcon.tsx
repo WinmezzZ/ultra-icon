@@ -11,7 +11,7 @@ const Loader5LineIconComponent = (p: SVGComponentProps) => {
   const { size, ...props } = p;
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
-      <path fill="currentColor" d="M0 0h24v24H0z" />
+      <path fill="none" d="M0 0h24v24H0z" />
       <path d="M12 3a9 9 0 0 1 9 9h-2a7 7 0 0 0-7-7V3z" />
     </svg>
   );

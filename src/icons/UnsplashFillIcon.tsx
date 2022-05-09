@@ -11,7 +11,7 @@ const UnsplashFillIconComponent = (p: SVGComponentProps) => {
   const { size, ...props } = p;
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
-      <path fill="currentColor" d="M0 0h24v24H0z" />
+      <path fill="none" d="M0 0h24v24H0z" />
       <path d="M8.5 11v5h7v-5H21v10H3V11h5.5zm7-8v5h-7V3h7z" />
     </svg>
   );
