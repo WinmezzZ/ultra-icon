@@ -1,7 +1,7 @@
 /**
  * 这些代码由 UltraIcons 自动生成，请勿改动。
  */
-import { SVGProps } from 'react';
+import React, { SVGProps } from 'react';
 import PropTypes from 'prop-types';
 import withWrapper from '../utils/withWrapper';
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
