@@ -24,19 +24,16 @@ const template: Template = ({ componentName, jsx }, { tpl }) => {
  * 这些代码由 UltraIcons 自动生成，请勿改动。
  */
 
- /** @jsx jsx */
- import { jsx } from '@emotion/react';
- import { SVGProps } from 'react';
+import { SVGProps } from 'react';
 import PropTypes from 'prop-types';
 import withWrapper from '../utils/withWrapper';
 
 interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
-  filled?: boolean;
 };
 
 const ${componentName + `Component`} = (p: SVGComponentProps) => {
-  const {size, filled, ...props} = p;
+  const {size, ...props} = p;
 
   return ${jsx};
 };

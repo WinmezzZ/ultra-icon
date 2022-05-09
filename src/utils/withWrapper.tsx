@@ -1,10 +1,10 @@
-import { css } from '@emotion/react';
+/** @jsx jsx */
+import { jsx, css } from '@emotion/react';
 import React, { forwardRef, PropsWithChildren } from 'react';
 import { SVGComponentProps } from '../interface';
 import merge from './merge';
 
-const iconStyles = (props: SVGComponentProps) => {
-  const { filled } = props;
+const iconStyles = (_props: SVGComponentProps) => {
   return css`
     display: inline-flex;
     align-items: center;
