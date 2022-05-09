@@ -1,7 +1,7 @@
 {
   "name": "ultra-icon",
   "description": "React Icons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "es/index.d.ts",
