@@ -14,10 +14,9 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
 const SendToBackIconComponent = (p: SVGComponentProps) => {
   const { size, filled, ...props } = p;
   return (
-    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-      <path stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M14 21H5V5h16v9" />
-      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M32 27h11v16H27V32" />
-      <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M14 32V14h18v18H14Z" />
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M11 3a1 1 0 0 1 1 1v2h5a1 1 0 0 1 1 1v5h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1v-2H7a1 1 0 0 1-1-1v-5H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7zm5 5h-4v3a1 1 0 0 1-1 1H8v4h4v-3a1 1 0 0 1 1-1h3V8z" />
     </svg>
   );
 };

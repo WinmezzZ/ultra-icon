@@ -11,35 +11,18 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const TimelineIconComponent = (p: SVGComponentProps) => {
+const TimeLineIconComponent = (p: SVGComponentProps) => {
   const { size, filled, ...props } = p;
   return (
-    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-      <g clipPath="url(#prefix__a)">
-        <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-        <path fill="#fff" fillOpacity={0.01} d="M48 0H0v48h48V0Z" />
-        <path
-          fill="null"
-          stroke="#000"
-          strokeLinejoin="round"
-          strokeWidth={4}
-          d="M13 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0Zm18 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0ZM13 36a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"
-        />
-        <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="M4 36h9m8 0h23M4 12h9m8 0h23" />
-        <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M4 4v40" />
-        <path stroke="#000" strokeLinecap="round" strokeWidth={4} d="M4 24h27m8 0h5" />
-      </g>
-      <defs>
-        <clipPath id="prefix__a">
-          <path fill="#fff" d="M0 0h48v48H0z" />
-        </clipPath>
-      </defs>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8h4v2h-6V7h2v5z" />
     </svg>
   );
 };
 
-TimelineIconComponent.propTypes = {
+TimeLineIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
-const TimelineIcon = withWrapper(TimelineIconComponent);
-export default TimelineIcon;
+const TimeLineIcon = withWrapper(TimeLineIconComponent);
+export default TimeLineIcon;

@@ -14,15 +14,9 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
 const FontSizeIconComponent = (p: SVGComponentProps) => {
   const { size, filled, ...props } = p;
   return (
-    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-      <path
-        stroke="#000"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={4}
-        d="M8 10.933V6h32v4.933M24 6v36m-8 0h16"
-      />
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
     </svg>
   );
 };

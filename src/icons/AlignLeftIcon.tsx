@@ -14,10 +14,9 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
 const AlignLeftIconComponent = (p: SVGComponentProps) => {
   const { size, filled, ...props } = p;
   return (
-    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-      <path fill="null" stroke="#000" strokeLinejoin="round" strokeWidth={4} d="M14.5 17h28v14h-28z" />
-      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M6.5 6v36" />
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M3 4h18v2H3V4zm0 15h14v2H3v-2zm0-5h18v2H3v-2zm0-5h14v2H3V9z" />
     </svg>
   );
 };

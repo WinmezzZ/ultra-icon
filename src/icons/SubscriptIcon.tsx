@@ -14,11 +14,9 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
 const SubscriptIconComponent = (p: SVGComponentProps) => {
   const { size, filled, ...props } = p;
   return (
-    <svg fill="none" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-      <path
-        fill="#333"
-        d="M238.763 170.667 448 423.595l209.237-252.928H768L503.381 490.539 768 810.41v.256H657.493L448 557.483 238.507 810.667H128v-.256l264.619-319.872L128 170.667h110.763zm680.704 536.746a34.133 34.133 0 1 0-56.32-15.36l-49.28 14.08A85.376 85.376 0 0 1 896 597.333a85.333 85.333 0 0 1 58.581 147.371l-69.504 65.963h96.256v42.666H810.667v-42.666l108.8-103.254z"
-      />
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M5.596 4 10.5 9.928 15.404 4H18l-6.202 7.497L18 18.994V19h-2.59l-4.91-5.934L5.59 19H3v-.006l6.202-7.497L3 4h2.596zM21.55 16.58a.8.8 0 1 0-1.32-.36l-1.155.33A2.001 2.001 0 0 1 21 14a2 2 0 0 1 1.373 3.454L20.744 19H23v1h-4v-1l2.55-2.42z" />
     </svg>
   );
 };

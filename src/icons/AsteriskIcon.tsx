@@ -14,25 +14,9 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
 const AsteriskIconComponent = (p: SVGComponentProps) => {
   const { size, filled, ...props } = p;
   return (
-    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-      <circle
-        cx={24}
-        cy={24}
-        r={20}
-        fill="null"
-        stroke="#000"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={4}
-      />
-      <path
-        stroke="#333"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={4}
-        d="M15 24h18m-13.5-7.794 9 15.588m0-15.588-9 15.588"
-      />
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M13 3v7.267l6.294-3.633 1 1.732-6.293 3.633 6.293 3.635-1 1.732L13 13.732V21h-2v-7.268l-6.294 3.634-1-1.732L9.999 12 3.706 8.366l1-1.732L11 10.267V3z" />
     </svg>
   );
 };

@@ -1,5 +1,5 @@
 import { css } from '@emotion/react';
-import { forwardRef, PropsWithChildren } from 'react';
+import React, { forwardRef, PropsWithChildren } from 'react';
 import { SVGComponentProps } from '../interface';
 import merge from './merge';
 
@@ -12,7 +12,7 @@ const iconStyles = (props: SVGComponentProps) => {
 };
 
 const defaultProps = {
-  size: 24,
+  size: 18,
 };
 
 const withWrapper = <T, P = SVGComponentProps>(Component: React.ComponentType<P & { ref?: React.Ref<T> }>) => {

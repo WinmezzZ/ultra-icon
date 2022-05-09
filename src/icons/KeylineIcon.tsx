@@ -11,27 +11,18 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
   size?: number | string;
   filled?: boolean;
 }
-const KeylineIconComponent = (p: SVGComponentProps) => {
+const KeyLineIconComponent = (p: SVGComponentProps) => {
   const { size, filled, ...props } = p;
   return (
-    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width={size} height={size} {...props}>
-      <path fill="#fff" fillOpacity={0.01} d="M0 0h48v48H0z" />
-      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M6 6h36v36H6V6Z" />
-      <path
-        fill="null"
-        stroke="#000"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={4}
-        d="M36 24c0 6.627-5.373 12-12 12s-12-5.373-12-12 5.373-12 12-12 12 5.373 12 12Z"
-      />
-      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="m4 4 40 40m0-40L4 44" />
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M12.917 13A6.002 6.002 0 0 1 1 12a6 6 0 0 1 11.917-1H23v2h-2v4h-2v-4h-2v4h-2v-4h-2.083zM7 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
     </svg>
   );
 };
 
-KeylineIconComponent.propTypes = {
+KeyLineIconComponent.propTypes = {
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
-const KeylineIcon = withWrapper(KeylineIconComponent);
-export default KeylineIcon;
+const KeyLineIcon = withWrapper(KeyLineIconComponent);
+export default KeyLineIcon;

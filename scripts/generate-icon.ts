@@ -5,7 +5,7 @@ import { transform } from '@svgr/core';
 import camelcase from 'camelcase';
 import template from './template';
 
-const files = glob.sync('raw/*.svg');
+const files = glob.sync('raw/**/*.svg');
 
 // const files = ['raw/abdominal.svg'];
 
