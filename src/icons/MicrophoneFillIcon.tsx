@@ -12,7 +12,7 @@ const MicrophoneFillIconComponent = (p: SVGComponentProps) => {
   return (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
       <path
-        fill="none"
+        fill="currentColor"
         d="M12 16c2.206 0 4-1.794 4-4V6c0-2.217-1.785-4.021-3.979-4.021a.933.933 0 0 0-.209.025A4.006 4.006 0 0 0 8 6v6c0 2.206 1.794 4 4 4z"
       />
       <path
