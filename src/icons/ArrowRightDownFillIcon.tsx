@@ -10,7 +10,14 @@ interface SVGComponentProps extends SVGProps<SVGSVGElement> {
 const ArrowRightDownFillIconComponent = (p: SVGComponentProps) => {
   const { size, ...props } = p;
   return (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill="none" {...props}>
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      fill="currentColor"
+      {...props}
+    >
       <path fill="none" d="M0 0h24v24H0z" />
       <path d="M11.637 13.05 5.98 7.395 7.394 5.98l5.657 5.657L18 6.687V18H6.687z" />
     </svg>

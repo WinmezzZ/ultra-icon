@@ -34,7 +34,7 @@ async function buildIcon() {
         plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
         icon: false,
         svgProps: {
-          fill: 'none',
+          fill: 'currentColor',
         },
         replaceAttrValues: { '#00497A': "{props.color || '#00497A'}" },
         jsxRuntime: 'automatic',
