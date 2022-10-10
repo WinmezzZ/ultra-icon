@@ -1,7 +1,7 @@
 {
   "name": "ultra-icon",
   "description": "React Icons",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "lib/index.js",
   "module": "es/index.js",
   "typings": "es/index.d.ts",
@@ -15,6 +15,7 @@
     "src",
     "scripts"
   ],
+  "sideEffects": false,
   "scripts": {
     "generate": "ts-node scripts/generate-icon.ts",
     "build:code": "ts-node scripts/build-code.ts",
