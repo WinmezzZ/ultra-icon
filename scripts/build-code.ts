@@ -10,7 +10,7 @@ async function build() {
   const bundle = await rollup({
     input: 'src/index.ts',
     plugins: [esbuild()],
-    external: id => !/^[./]/.test(id),
+    external: ['react', 'react-dom', 'prop-types', /@emotion\/react/],
   });
 
   bundle
